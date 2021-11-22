@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/footer.css' %}">
+    <title>Blog</title>
+</head>
+
+<body>
+    {% block header %}
+    {% endblock %}
+    <h1>BLOG list</h1>
+    {% block content %}
+    {% endblock %}
+    {% block footer %}
+    {% endblock %}
+
+
+</body>
+
+</html>
