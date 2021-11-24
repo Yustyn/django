@@ -9,17 +9,31 @@
     <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
     <link rel="stylesheet" href="{% static 'blog/css/header.css' %}">
     <link rel="stylesheet" href="{% static 'blog/css/footer.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
     <title>Blog</title>
 </head>
 
 <body>
-    {% block header %}
-    {% endblock %}
-    <h1>BLOG list</h1>
-    {% block content %}
-    {% endblock %}
-    {% block footer %}
-    {% endblock %}
+    <div class="container"><a href="{% url 'post_list' %}"><button type="submit">Home</button></a>
+        <a href="{% url 'post_create' %}"><button>Create new post</button></a>
+    </div>
+
+
+
+    <div class="container">
+        <h1>BLOG list</h1>
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div class="container">
+        {% block footer %}
+        {% endblock %}
+    </div>
 
 
 </body>
