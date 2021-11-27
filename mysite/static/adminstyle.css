@@ -3,6 +3,10 @@
     color: #ffffff;
 }
 
+#branding {
+    width: 500px;
+}
+
 #branding h1{
     color: #ffffff;
 }
@@ -19,4 +23,20 @@
     border-radius: 4px;
     color: #fff;
     cursor: pointer;
+}
+
+.content {
+    background-color: rgb(182, 182, 182);
+}
+
+.content caption {
+    background-color: rgb(70, 70, 70);
+}
+
+#content-related {
+    background-color: rgb(223, 223, 223);
+}
+
+#content-main {
+    width: 180%;
 }
