@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(118, 150, 150);
+}
+
+.post {
+    background-color: rgb(180, 180, 180);
+    margin: 20px;
+    padding: 20px;
+}
+
+.post > p {
+    background-color: rgb(161, 161, 161);
+}
+
+.date {
+    background-color: white;
+    width: max-content;
+}

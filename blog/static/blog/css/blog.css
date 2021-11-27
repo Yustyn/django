@@ -1,18 +1,22 @@
 body{
-    background-color: rgb(118, 150, 150);
+    background-color: rgb(163, 163, 163);
+    /* margin: 20px !important; */
 }
 
-.post {
-    background-color: rgb(180, 180, 180);
-    margin: 20px;
-    padding: 20px;
+.wrapper {
+    background-color: rgb(126, 125, 125);
+    
 }
 
-.post > p {
-    background-color: rgb(161, 161, 161);
+.wrapper ul{
+    list-style: none !important;
 }
 
-.date {
+
+
+.wrapper a {
+    color: black;
+    text-decoration: none !important;
     background-color: white;
-    width: max-content;
+    padding:3px;
 }

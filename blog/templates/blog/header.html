@@ -1,1 +1,12 @@
-<h1>Header</h1>
+<div class="wrapper">
+    <div class="container header">
+        <ul class="d-flex justify-content-between">
+            <li><a href="{% url 'post_list' %}">Home</a></li>
+            <li><a href="{% url 'post_create' %}">CREATE</a></li>
+            <li><a href="{% url 'contact' %}">Contact us</a></li>
+            <li><a href="{% url 'login' %}">Log in</a></li>
+            <li><a href="{% url 'logout' %}">Log out</a></li>
+        </ul>
+
+    </div>
+</div>
