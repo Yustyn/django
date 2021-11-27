@@ -1,11 +1,15 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-<a href="{% url 'post_list' %}">Home</a>
+{% if user.is_anonymous %}
 <h2>Log in form</h2>
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Log in</button>
 </form>
+{% endif %}
+{% if user.is_active %}
+<h2>Welcome back, {{user}}</h2>
+{% endif %}
 {% endblock %}

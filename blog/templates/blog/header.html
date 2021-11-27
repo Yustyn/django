@@ -1,11 +1,16 @@
 <div class="wrapper">
     <div class="container header">
-        <ul class="d-flex justify-content-between">
+        <ul class="d-flex">
             <li><a href="{% url 'post_list' %}">Home</a></li>
             <li><a href="{% url 'post_create' %}">CREATE</a></li>
             <li><a href="{% url 'contact' %}">Contact us</a></li>
-            <li><a href="{% url 'login' %}">Log in</a></li>
+            {% if user.is_anonymous %}
+            <li style="margin-left: auto;"><a href="{% url 'login' %}">Log in</a></li>
+            {% endif %}
+            {% if user.is_active %}
+            <p class="greetings">Hello {{ user }}! </p>
             <li><a href="{% url 'logout' %}">Log out</a></li>
+            {% endif %}
         </ul>
 
     </div>

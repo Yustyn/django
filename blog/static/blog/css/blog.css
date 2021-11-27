@@ -1,6 +1,5 @@
 body{
     background-color: rgb(163, 163, 163);
-    /* margin: 20px !important; */
 }
 
 .wrapper {
@@ -12,6 +11,10 @@ body{
     list-style: none !important;
 }
 
+.wrapper ul li {
+    margin: 5px;
+}
+
 
 
 .wrapper a {
@@ -19,4 +22,11 @@ body{
     text-decoration: none !important;
     background-color: white;
     padding:3px;
+}
+
+.wrapper .greetings {
+    margin-left: auto;
+    margin-top: 3.5px;
+    padding: 1px 2px 2.5px 2px;
+    background-color: rgb(199, 199, 199);
 }

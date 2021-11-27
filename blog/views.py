@@ -108,7 +108,7 @@ def user_login(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return HttpResponse('Authenticated successful!')
+                    return render(request, 'blog/login.html', {'form': form})
                 else:
                     return HttpResponse('User blocked!')
             else:
@@ -119,13 +119,6 @@ def user_login(request):
 
 
 def user_logout(request):
-    if request.method == 'POST':
-        form = LoginForm(request.POST)
-        if form.is_valid():
-            client_data = form.cleaned_data
-            user = authenticate(
-                username=client_data['username'], password=client_data['password'])
-            if user is not None:
-                if user.is_active:
-                    logout(request, user)
-    return render(request, 'blog/post_lists.html')
+    logout(request)
+    form = LoginForm(request.POST)
+    return render(request, 'blog/login.html', {'form': form})
