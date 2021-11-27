@@ -6,8 +6,9 @@ from django.contrib import admin
 # Register your models here.
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('image_show', 'title', 'author', 'create_date' ,'publish_date')
-    list_filter = ('author', 'create_date' ,'publish_date')
+    list_display = ('image_show', 'title', 'author',
+                    'create_date', 'publish_date')
+    list_filter = ('author', 'create_date', 'publish_date')
     search_fields = ('title', 'text')
     date_hierarchy = 'publish_date'
     ordering = ['author', 'publish_date']
@@ -18,5 +19,6 @@ class PostAdmin(admin.ModelAdmin):
         return "None"
 
     image_show.__name__ = 'images'
+
 
 admin.site.register(Post, PostAdmin)

@@ -1,7 +1,10 @@
 body{
     background-color: rgb(163, 163, 163);
 }
-
+.header {
+    position: sticky;
+    top: 0;
+}
 .wrapper {
     background-color: rgb(126, 125, 125);
     
